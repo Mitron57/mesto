@@ -13,7 +13,7 @@ const errorHandler = async (res) => {
     if (res.ok) {
         return await res.json();
     }
-    return Promise.reject(`Error: ${res}`);
+    return Promise.reject(`Error: ${JSON.stringify(res.body)}`);
 }
 
 const logger = error => console.log(error);
@@ -60,7 +60,7 @@ const deleteCard = (cardId) => {
 
 const toggleLikeCard = (cardId, method) => {
     if (method === "PUT" || method === "DELETE") {
-        return fetch(`${cards}/${cardId}`, {
+        return fetch(`${cards}/likes/${cardId}`, {
             method,
             headers
         })

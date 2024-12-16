@@ -205,12 +205,11 @@ cardPopup.classList.add('popup_is-animated');
 imagePopup.classList.add('popup_is-animated');
 
 const validationSettings = {
-    formClass: 'popup__form',
-    inputClass: 'popup__input',
+    formClass: '.popup__form',
+    inputClass: '.popup__input',
     inputErrorClass: 'popup__input_error',
-    buttonClass: 'popup__button',
+    buttonClass: '.popup__button',
     buttonInactiveClass: 'popup__button_inactive',
     errorClass: 'popup__error-text_active'
-}
-
+};
 enableValidation(validationSettings);
